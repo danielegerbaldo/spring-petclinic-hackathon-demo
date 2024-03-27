@@ -46,6 +46,7 @@ class PetController {
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 
 	private final OwnerRepository owners;
+	public String filetest = null;
 
 	public PetController(OwnerRepository owners) {
 		this.owners = owners;
@@ -69,7 +70,7 @@ class PetController {
 	@ModelAttribute("pet")
 	public Pet findPet(@PathVariable("ownerId") int ownerId,
 			@PathVariable(name = "petId", required = false) Integer petId) {
-
+	
 		if (petId == null) {
 			return new Pet();
 		}
