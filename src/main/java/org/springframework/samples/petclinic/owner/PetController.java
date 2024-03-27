@@ -46,6 +46,7 @@ class PetController {
 
 	private final OwnerRepository owners;
 	public String badvariable = null;
+	public String anotherbadone = null;
 
 	public PetController(OwnerRepository owners) {
 		this.owners = owners;
