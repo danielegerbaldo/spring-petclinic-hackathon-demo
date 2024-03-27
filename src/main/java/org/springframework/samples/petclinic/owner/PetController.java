@@ -135,13 +135,15 @@ class PetController {
 
 		String petName = pet.getName();
 
-		// checking if the pet name already exist for the owner
+
+		//check if pet name already exist
 		if (StringUtils.hasText(petName)) {
 			Pet existingPet = owner.getPet(petName.toLowerCase(), false);
 			if (existingPet != null && existingPet.getId() != pet.getId()) {
 				result.rejectValue("name", "duplicate", "already exists");
 			}
 		}
+
 
 		LocalDate currentDate = LocalDate.now();
 		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
