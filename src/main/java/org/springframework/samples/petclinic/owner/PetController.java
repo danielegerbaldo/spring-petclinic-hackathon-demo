@@ -47,6 +47,7 @@ class PetController {
 
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 	private String filetransfer = "";
+	private String filetransfer2 = "";
 	private final OwnerRepository owners;
 	public String filetest = null;
 
